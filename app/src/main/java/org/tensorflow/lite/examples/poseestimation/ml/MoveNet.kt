@@ -333,12 +333,12 @@ class MoveNet(private val interpreter: Interpreter, private var gpuDelegate: Gpu
                             (sqrt(Math.pow(position_of_right_wrist_x - position_of_right_elbow_x,2.0) +
                                     Math.pow(position_of_right_wrist_y - position_of_right_elbow_y,2.0)) *
                                     sqrt(Math.pow(position_of_right_elbow_x - position_of_right_shoulder_x,2.0) +
-                                            Math.pow(position_of_right_elbow_y - position_of_right_shoulder_y,2.0)))) > 0.35 && (((position_of_left_wrist_x - position_of_left_elbow_x)*(position_of_left_shoulder_x - position_of_left_elbow_x)+
+                                            Math.pow(position_of_right_elbow_y - position_of_right_shoulder_y,2.0)))) > 0.4 && (((position_of_left_wrist_x - position_of_left_elbow_x)*(position_of_left_shoulder_x - position_of_left_elbow_x)+
                             (position_of_left_wrist_y - position_of_left_elbow_y)*(position_of_left_shoulder_y - position_of_left_elbow_y))/
                             (sqrt(Math.pow(position_of_left_wrist_x - position_of_left_elbow_x,2.0) +
                                     Math.pow(position_of_left_wrist_y - position_of_left_elbow_y,2.0)) *
                                     sqrt(Math.pow(position_of_left_elbow_x - position_of_left_shoulder_x,2.0) +
-                                            Math.pow(position_of_left_elbow_y - position_of_left_shoulder_y,2.0)))) > 0.35) {
+                                            Math.pow(position_of_left_elbow_y - position_of_left_shoulder_y,2.0)))) > 0.4) {
                     start_rep = SystemClock.elapsedRealtimeNanos()
                     down = true
                     up = false
